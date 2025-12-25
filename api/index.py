@@ -6,7 +6,7 @@ app = Flask(__name__, template_folder="../templates")
 
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key=("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")
+    api_key=("")
 )
 
 chat_history = [
@@ -37,4 +37,5 @@ def chat():
         return jsonify({"reply": reply})
     except Exception:
         return jsonify({"reply": "⚠️ Alis is currently unavailable."})
+
 
